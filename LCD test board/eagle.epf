@@ -7,6 +7,7 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="C:/EAGLE-7.3.0/lbr/con_AXE534124.lbr"
 UsedLibrary="C:/EAGLE-7.3.0/lbr/diode.lbr"
 UsedLibrary="C:/EAGLE-7.3.0/lbr/APE1117.lbr"
 UsedLibrary="C:/EAGLE-7.3.0/lbr/LP2980.lbr"
