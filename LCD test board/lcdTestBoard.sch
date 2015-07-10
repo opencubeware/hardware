@@ -9048,6 +9048,11 @@ General-purpose diode for high-speed switching</description>
 <part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9233,6 +9238,11 @@ external on/off</text>
 </instance>
 <instance part="+3V1" gate="G$1" x="223.52" y="99.06"/>
 <instance part="+3V2" gate="G$1" x="223.52" y="50.8"/>
+<instance part="GND3" gate="1" x="60.96" y="12.7"/>
+<instance part="GND4" gate="1" x="22.86" y="177.8"/>
+<instance part="GND5" gate="1" x="63.5" y="177.8"/>
+<instance part="GND6" gate="1" x="88.9" y="177.8"/>
+<instance part="GND7" gate="1" x="129.54" y="177.8"/>
 </instances>
 <busses>
 </busses>
@@ -9426,12 +9436,14 @@ external on/off</text>
 <segment>
 <pinref part="CON1" gate="_P1" pin="GND@49"/>
 <wire x1="25.4" y1="182.88" x2="22.86" y2="182.88" width="0.1524" layer="91"/>
-<label x="22.86" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="22.86" y1="180.34" x2="22.86" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="_P1" pin="GND@50"/>
 <wire x1="60.96" y1="182.88" x2="63.5" y2="182.88" width="0.1524" layer="91"/>
-<label x="63.5" y="182.88" size="1.27" layer="95" xref="yes"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="63.5" y1="180.34" x2="63.5" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="_P1" pin="GND@2"/>
@@ -9446,12 +9458,14 @@ external on/off</text>
 <segment>
 <pinref part="CON1" gate="_P2" pin="GND@49"/>
 <wire x1="91.44" y1="182.88" x2="88.9" y2="182.88" width="0.1524" layer="91"/>
-<label x="88.9" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="88.9" y1="182.88" x2="88.9" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="_P2" pin="GND@50"/>
 <wire x1="127" y1="182.88" x2="129.54" y2="182.88" width="0.1524" layer="91"/>
-<label x="129.54" y="182.88" size="1.27" layer="95" xref="yes"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="129.54" y1="182.88" x2="129.54" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="_P2" pin="GND@2"/>
@@ -9586,12 +9600,11 @@ external on/off</text>
 <pinref part="CON2" gate="CON$1" pin="Z4"/>
 <wire x1="60.96" y1="20.32" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="17.78" x2="60.96" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="15.24" x2="63.5" y2="15.24" width="0.1524" layer="91"/>
-<label x="63.5" y="15.24" size="1.27" layer="95" xref="yes"/>
 <junction x="60.96" y="25.4"/>
 <junction x="60.96" y="22.86"/>
 <junction x="60.96" y="20.32"/>
 <junction x="60.96" y="17.78"/>
+<pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="G$1" pin="1"/>
@@ -10091,8 +10104,8 @@ external on/off</text>
 <label x="22.86" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="121.92" x2="17.78" y2="121.92" width="0.1524" layer="91"/>
-<label x="17.78" y="121.92" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="200.66" x2="22.86" y2="200.66" width="0.1524" layer="91"/>
+<label x="22.86" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_RE" class="0">
@@ -10102,8 +10115,8 @@ external on/off</text>
 <label x="22.86" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="124.46" x2="17.78" y2="124.46" width="0.1524" layer="91"/>
-<label x="17.78" y="124.46" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="200.66" x2="63.5" y2="200.66" width="0.1524" layer="91"/>
+<label x="63.5" y="200.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_WE" class="0">
@@ -10113,8 +10126,8 @@ external on/off</text>
 <label x="22.86" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="127" x2="17.78" y2="127" width="0.1524" layer="91"/>
-<label x="17.78" y="127" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="198.12" x2="22.86" y2="198.12" width="0.1524" layer="91"/>
+<label x="22.86" y="198.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_RS" class="0">
@@ -10124,8 +10137,8 @@ external on/off</text>
 <label x="22.86" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="129.54" x2="17.78" y2="129.54" width="0.1524" layer="91"/>
-<label x="17.78" y="129.54" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="198.12" x2="63.5" y2="198.12" width="0.1524" layer="91"/>
+<label x="63.5" y="198.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_CS" class="0">
@@ -10135,8 +10148,8 @@ external on/off</text>
 <label x="22.86" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="132.08" x2="17.78" y2="132.08" width="0.1524" layer="91"/>
-<label x="17.78" y="132.08" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="195.58" x2="22.86" y2="195.58" width="0.1524" layer="91"/>
+<label x="22.86" y="195.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_TE" class="0">
@@ -10146,8 +10159,8 @@ external on/off</text>
 <label x="22.86" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="134.62" x2="17.78" y2="134.62" width="0.1524" layer="91"/>
-<label x="17.78" y="134.62" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="195.58" x2="63.5" y2="195.58" width="0.1524" layer="91"/>
+<label x="63.5" y="195.58" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D0" class="0">
@@ -10157,8 +10170,8 @@ external on/off</text>
 <label x="22.86" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="127" x2="35.56" y2="127" width="0.1524" layer="91"/>
-<label x="35.56" y="127" size="1.27" layer="95" xref="yes"/>
+<wire x1="91.44" y1="223.52" x2="88.9" y2="223.52" width="0.1524" layer="91"/>
+<label x="88.9" y="223.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D1" class="0">
@@ -10168,8 +10181,8 @@ external on/off</text>
 <label x="22.86" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="129.54" x2="35.56" y2="129.54" width="0.1524" layer="91"/>
-<label x="35.56" y="129.54" size="1.27" layer="95" xref="yes"/>
+<wire x1="127" y1="223.52" x2="129.54" y2="223.52" width="0.1524" layer="91"/>
+<label x="129.54" y="223.52" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D2" class="0">
@@ -10179,8 +10192,8 @@ external on/off</text>
 <label x="22.86" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="132.08" x2="35.56" y2="132.08" width="0.1524" layer="91"/>
-<label x="35.56" y="132.08" size="1.27" layer="95" xref="yes"/>
+<wire x1="91.44" y1="226.06" x2="88.9" y2="226.06" width="0.1524" layer="91"/>
+<label x="88.9" y="226.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D3" class="0">
@@ -10190,8 +10203,8 @@ external on/off</text>
 <label x="22.86" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="134.62" x2="35.56" y2="134.62" width="0.1524" layer="91"/>
-<label x="35.56" y="134.62" size="1.27" layer="95" xref="yes"/>
+<wire x1="127" y1="226.06" x2="129.54" y2="226.06" width="0.1524" layer="91"/>
+<label x="129.54" y="226.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D4" class="0">
@@ -10201,8 +10214,8 @@ external on/off</text>
 <label x="22.86" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="137.16" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
-<label x="35.56" y="137.16" size="1.27" layer="95" xref="yes"/>
+<wire x1="91.44" y1="228.6" x2="88.9" y2="228.6" width="0.1524" layer="91"/>
+<label x="88.9" y="228.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D5" class="0">
@@ -10212,8 +10225,8 @@ external on/off</text>
 <label x="22.86" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="139.7" x2="35.56" y2="139.7" width="0.1524" layer="91"/>
-<label x="35.56" y="139.7" size="1.27" layer="95" xref="yes"/>
+<wire x1="127" y1="228.6" x2="129.54" y2="228.6" width="0.1524" layer="91"/>
+<label x="129.54" y="228.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D6" class="0">
@@ -10223,8 +10236,8 @@ external on/off</text>
 <label x="22.86" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="142.24" x2="35.56" y2="142.24" width="0.1524" layer="91"/>
-<label x="35.56" y="142.24" size="1.27" layer="95" xref="yes"/>
+<wire x1="91.44" y1="231.14" x2="88.9" y2="231.14" width="0.1524" layer="91"/>
+<label x="88.9" y="231.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D7" class="0">
@@ -10234,8 +10247,8 @@ external on/off</text>
 <label x="22.86" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="144.78" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
-<label x="35.56" y="144.78" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="213.36" x2="22.86" y2="213.36" width="0.1524" layer="91"/>
+<label x="22.86" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D8" class="0">
@@ -10245,8 +10258,8 @@ external on/off</text>
 <label x="22.86" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="147.32" x2="35.56" y2="147.32" width="0.1524" layer="91"/>
-<label x="35.56" y="147.32" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="213.36" x2="63.5" y2="213.36" width="0.1524" layer="91"/>
+<label x="63.5" y="213.36" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D9" class="0">
@@ -10256,8 +10269,8 @@ external on/off</text>
 <label x="22.86" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="149.86" x2="35.56" y2="149.86" width="0.1524" layer="91"/>
-<label x="35.56" y="149.86" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="210.82" x2="22.86" y2="210.82" width="0.1524" layer="91"/>
+<label x="22.86" y="210.82" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D10" class="0">
@@ -10267,8 +10280,8 @@ external on/off</text>
 <label x="22.86" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
-<label x="35.56" y="152.4" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="210.82" x2="63.5" y2="210.82" width="0.1524" layer="91"/>
+<label x="63.5" y="210.82" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D11" class="0">
@@ -10278,8 +10291,8 @@ external on/off</text>
 <label x="22.86" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="154.94" x2="35.56" y2="154.94" width="0.1524" layer="91"/>
-<label x="35.56" y="154.94" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="208.28" x2="22.86" y2="208.28" width="0.1524" layer="91"/>
+<label x="22.86" y="208.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D12" class="0">
@@ -10289,8 +10302,8 @@ external on/off</text>
 <label x="22.86" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="157.48" x2="35.56" y2="157.48" width="0.1524" layer="91"/>
-<label x="35.56" y="157.48" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="208.28" x2="63.5" y2="208.28" width="0.1524" layer="91"/>
+<label x="63.5" y="208.28" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D13" class="0">
@@ -10300,8 +10313,8 @@ external on/off</text>
 <label x="22.86" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="160.02" x2="35.56" y2="160.02" width="0.1524" layer="91"/>
-<label x="35.56" y="160.02" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="205.74" x2="22.86" y2="205.74" width="0.1524" layer="91"/>
+<label x="22.86" y="205.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D14" class="0">
@@ -10311,8 +10324,8 @@ external on/off</text>
 <label x="22.86" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="162.56" x2="35.56" y2="162.56" width="0.1524" layer="91"/>
-<label x="35.56" y="162.56" size="1.27" layer="95" xref="yes"/>
+<wire x1="60.96" y1="205.74" x2="63.5" y2="205.74" width="0.1524" layer="91"/>
+<label x="63.5" y="205.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LCD_D15" class="0">
@@ -10322,8 +10335,8 @@ external on/off</text>
 <label x="22.86" y="17.78" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="33.02" y1="165.1" x2="35.56" y2="165.1" width="0.1524" layer="91"/>
-<label x="35.56" y="165.1" size="1.27" layer="95" xref="yes"/>
+<wire x1="25.4" y1="203.2" x2="22.86" y2="203.2" width="0.1524" layer="91"/>
+<label x="22.86" y="203.2" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$14" class="0">
